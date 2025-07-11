@@ -17,7 +17,7 @@ const ScratchCardList = ({ revealed, onReveal }) => {
           key={data.day}
           {...data}
           isBlurred={!revealed[data.day]}
-          onClick={() => onReveal(data.day)}
+          //onClick={() => onReveal(data.day)}
         />
       ))}
     </div>
