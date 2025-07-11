@@ -1,6 +1,7 @@
 {
   "name": "niko-birthday",
   "private": true,
+  "homepage": "https://xicocorreia.github.io/Niko-Birthday/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
