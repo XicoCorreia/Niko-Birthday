@@ -18,9 +18,9 @@ function App() {
 
   return ( <>
   <div className='header'>
-    <img className="dinoleft" src="/dino.png" alt="Dino"></img>
+    <img className="dinoleft" src="/Niko-Birthday/dino.png" alt="Dino"></img>
     <h1>Niko's 23rd Birthday</h1> 
-    <img className="dinoright" src="/dino.png" alt="Dino"></img>
+    <img className="dinoright" src="/Niko-Birthday/dino.png" alt="Dino"></img>
   </div>
   <p> Hej! Welcome to Nikoline's 23rd birthday webpage, a page created by her boyfriend
       aka Xico.<br></br>

@@ -32,20 +32,35 @@ const Countdown = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const isTimeZero =
+  (timeLeft.days ?? 0) === 0 &&
+  (timeLeft.hours ?? 0) === 0 &&
+  (timeLeft.minutes ?? 0) === 0 &&
+  (timeLeft.seconds ?? 0) === 0;
+
+
   return (
     <div className="countdown-container">
       <h1 className="countdown-title">⏳ Countdown to Birthday</h1>
       <div className="countdown-values">
-      <p>
-        {String(timeLeft.days ?? 0).padStart(2, '0')}: 
-        {String(timeLeft.hours ?? 0).padStart(2, '0')}: 
-        {String(timeLeft.minutes ?? 0).padStart(2, '0')}: 
-        {String(timeLeft.seconds ?? 0).padStart(2, '0')}
-      </p>
-
+        {isTimeZero ? (
+          <div className="birthday-message">
+            🎉 <strong>HAPPY BIRTHDAY!</strong> 🎉
+            <div className="confetti">🎊🎊🎊🎊🎊</div>
+          </div>
+        ) : (
+          <p>
+            {String(timeLeft.days ?? 0).padStart(2, '0')}:
+            {String(timeLeft.hours ?? 0).padStart(2, '0')}:
+            {String(timeLeft.minutes ?? 0).padStart(2, '0')}:
+            {String(timeLeft.seconds ?? 0).padStart(2, '0')}
+          </p>
+        )}
       </div>
     </div>
   );
+  
+
 };
 
 export default Countdown;
